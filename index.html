@@ -642,42 +642,48 @@ Bavaseer ki dva, Bavaseer ka ilaj, Bawaseer ki dawa, Bawaseer ka ilaj, Bawaseer 
     </footer>
     
     <script>
-        // Simple form submission handler
-        document.getElementById('piles-free-order').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your order! We will contact you shortly to confirm.');
-            this.reset();
+    // Enhanced Social Sharing Functions
+    const shareData = {
+        title: 'Piles Free - Natural Ayurvedic Remedy',
+        text: 'Ancient Ayurvedic solution for piles relief in 72 hours. 100% natural formula with proven results.',
+        url: window.location.href
+    };
+
+    // Facebook Sharing
+    document.getElementById('share-fb').addEventListener('click', function(e) {
+        e.preventDefault();
+        const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}`;
+        window.open(shareUrl, 'fb-share-dialog', 'width=626,height=436');
+    });
+
+    // WhatsApp Sharing
+    document.getElementById('share-wa').addEventListener('click', function(e) {
+        e.preventDefault();
+        const shareText = `${shareData.text} ${shareData.url}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank');
+    });
+
+    // Twitter Sharing
+    document.getElementById('share-tw').addEventListener('click', function(e) {
+        e.preventDefault();
+        const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`;
+        window.open(shareUrl, '_blank');
+    });
+
+    // Optional: Web Share API for mobile devices
+    if (navigator.share) {
+        const webShareBtn = document.createElement('button');
+        webShareBtn.className = 'social-icon';
+        webShareBtn.innerHTML = '<i class="fas fa-share-alt"></i>';
+        webShareBtn.addEventListener('click', async () => {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.log('Error sharing:', err);
+            }
         });
-        
-        // Payment method toggle
-        const paymentMethods = document.querySelectorAll('input[name="payment"]');
-        const upiQr = document.getElementById('upi-qr');
-        
-        paymentMethods.forEach(method => {
-            method.addEventListener('change', function() {
-                if(this.value === 'upi') {
-                    upiQr.style.display = 'block';
-                } else {
-                    upiQr.style.display = 'none';
-                }
-            });
-        });
-        
-        // Social sharing buttons
-        document.getElementById('share-fb').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), 'fb-share-dialog', 'width=626,height=436');
-        });
-        
-        document.getElementById('share-wa').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.open('https://wa.me/?text=' + encodeURIComponent('Check out this natural Ayurvedic solution for piles: ' + window.location.href), '_blank');
-        });
-        
-        document.getElementById('share-tw').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('Natural Ayurvedic remedy for piles relief in 72 hours: ') + '&url=' + encodeURIComponent(window.location.href), '_blank');
-        });
-    </script>
+        document.querySelector('.social-icons').appendChild(webShareBtn);
+    }
+</script>
 </body>
 </html>
