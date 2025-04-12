@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ayurveda - PilesFree</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6b3a;
+            --secondary: #8ba888;
+            --accent: #d4a762;
+            --light: #f5f5f0;
+            --dark: #333333;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://example.com/ayurveda-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Content Section */
+        .about-content {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .content-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .content-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .content-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Piles<span>Free</span></a>
+            <nav>
+                <a href="#" class="cta-button">Order Now</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Ayurveda & PilesFree</h1>
+            <p>The ancient science of natural healing meets modern piles treatment</p>
+        </div>
+    </section>
+    
+    <!-- Content Section -->
+    <section class="about-content">
+        <div class="container">
+            <h2 class="section-title">The Ayurvedic Solution for Piles</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="https://example.com/ayurveda-herbs.jpg" alt="Ayurvedic Herbs" loading="lazy">
+                    <h3>What is PilesFree?</h3>
+                    <p>PilesFree is a 100% natural Ayurvedic formula that provides fast relief from piles in just 72 hours. Made with rare, time-tested herbs from ancient Indian medicine, it safely eliminates pain, itching, and swelling without chemicals or side effects.</p>
+                </div>
+                
+                <div class="content-card">
+                    <img src="https://example.com/ancient-ayurveda.jpg" alt="Ancient Ayurveda" loading="lazy">
+                    <h3>Ayurvedic Heritage</h3>
+                    <p>Our formula is based on centuries-old Ayurvedic texts that identified specific herb combinations for digestive health and piles treatment. Unlike Western approaches that just treat symptoms, Ayurveda addresses the root causes of piles.</p>
+                </div>
+                
+                <div class="content-card">
+                    <img src="https://example.com/pilesfree-bottle.jpg" alt="PilesFree Bottle" loading="lazy">
+                    <h3>Why It Works</h3>
+                    <p>PilesFree combines three powerful Ayurvedic actions:
+                        <ul>
+                            <li>Reduces inflammation (Shothahara)</li>
+                            <li>Improves digestion (Agnideepana)</li>
+                            <li>Strengthens tissues (Dhatuvardhana)</li>
+                        </ul>
+                        This holistic approach provides lasting relief.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="copyright">© 2023 PilesFree. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
